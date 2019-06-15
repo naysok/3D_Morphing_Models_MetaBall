@@ -7,8 +7,8 @@ import bpy
 
 
 
-for i in range(91):
-# for i in range(10):
+# for i in range(106):
+for i in range(30):
 
 
     number = "%03d"%(i)
@@ -48,11 +48,14 @@ for i in range(91):
 
 
     ### Modifier
-    ##### Add Modifier
     bpy.context.scene.objects.active = obj
+
+    ##### SUBSURF
     bpy.ops.object.modifier_add(type='SUBSURF')
-    bpy.data.objects[tmp_name].modifiers["Subsurf"].render_levels = 4
-    bpy.ops.object.modifier_apply()
+    bpy.data.objects[tmp_name].modifiers["Subsurf"].render_levels = 2
+
+    #bpy.ops.object.modifier_apply()
+
 
 
     ### KeyFrame Assign
